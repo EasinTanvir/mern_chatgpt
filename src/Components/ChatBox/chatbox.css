@@ -1,0 +1,596 @@
+.chat {
+  width: 100%;
+  height: 84vh;
+  display: flex;
+}
+.c-containers {
+  width: 95%;
+  margin: 0px 10px 0px auto;
+}
+.msg-logo {
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgb(131, 119, 119);
+}
+
+.chat-left {
+  display: flex;
+  height: 85vh;
+
+  flex-direction: column;
+}
+.text {
+  overflow-y: scroll;
+  height: 78%;
+}
+.input-text {
+  height: 22%;
+  margin-top: 2rem;
+}
+.chat-right {
+  height: 100%;
+  overflow-y: scroll;
+}
+.input-text {
+  width: 98%;
+  display: flex;
+  gap: 1rem;
+}
+.input-text input {
+  width: 100%;
+  height: 50px;
+  padding: 10px 5px;
+  border-radius: 5px;
+  border: 1px solid #a5a5a5;
+}
+.input-text button {
+  width: 113px;
+  height: 50px;
+  background: #0080ff;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  border: none;
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.sender {
+  display: flex;
+
+  gap: 1.5rem;
+  margin-top: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+/* .rec {
+  height: 4rem;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+} */
+.sender.own {
+  margin-top: 1rem;
+  margin-right: 0.5rem;
+  display: flex;
+  gap: 1rem;
+
+  flex-direction: row-reverse;
+  /* align-items: flex-end; */
+}
+.message {
+  position: relative;
+  background-color: #84909d;
+  padding: 15px 25px 2px 18px;
+  color: white;
+  border-radius: 6px;
+  border-left: 2rem;
+  max-width: 280px;
+  margin-bottom: 1rem;
+}
+.shape {
+  position: absolute;
+  left: -6px;
+  top: 0;
+  bottom: 1;
+  margin-top: 0.5rem;
+  width: 17px;
+  height: 17px;
+  background-color: #84909d;
+  transform: rotate(45deg);
+}
+
+.shapes {
+  position: absolute;
+  right: -5px;
+  top: 0;
+  bottom: 0;
+  margin-top: 0.5rem;
+  width: 17px;
+  height: 17px;
+  background-color: #1976d2;
+  transform: rotate(45deg);
+}
+.sender.own .ellepse {
+  background-color: #1976d2;
+  margin-bottom: 1rem;
+}
+.sender.own .message {
+  background-color: #1976d2;
+}
+
+.ellepse {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #84909d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+}
+
+.message p {
+  font-size: 16px;
+}
+
+/* chat right */
+.top {
+  margin-top: 1rem;
+}
+.top h3 {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 23px;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.top p {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  color: #000000;
+  margin-top: 0.5rem;
+}
+
+.btns2 {
+  display: flex;
+}
+.btns2 button {
+  width: 100%;
+  background: #ffffff;
+  border: 0.5px solid rgba(82, 82, 82, 0.41);
+  border-radius: 2px;
+  height: 35px;
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+}
+.core {
+  margin-top: 1rem;
+}
+.core h3 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.core span:nth-child(2) {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 23px;
+  color: #000000;
+  margin-top: 0.2rem;
+}
+.top-input {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.input-items {
+  display: flex;
+  gap: 10px;
+}
+.ctn {
+  border: none;
+  border-bottom: 1px solid black;
+  border-radius: 0px;
+  height: 10px;
+}
+
+.form-group {
+  position: relative;
+  border: 1px solid #999;
+
+  width: 50%;
+  border-radius: 5px;
+}
+.year {
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  bottom: 0px;
+  color: #666;
+}
+.years {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  bottom: 0px;
+  color: #666;
+}
+.form-group > label {
+  position: absolute;
+  top: -12px;
+  left: 25px;
+  background-color: white;
+  color: #7e7a7a;
+  padding: 0 5px;
+  font-size: 11px;
+}
+
+.form-group > input {
+  border: none;
+  border: 0;
+  line-height: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  padding-right: 25px;
+  margin: 0px 0px 0px 0px;
+}
+.form-group input:focus {
+  outline: none;
+}
+
+.form-groups {
+  position: relative;
+  border: 1px solid #999;
+  width: 50%;
+  border-radius: 5px;
+}
+.form-groups > label {
+  position: absolute;
+  top: -12px;
+  left: 25px;
+  background-color: white;
+  color: #7e7a7a;
+  font-size: 11px;
+  padding: 0 5px;
+}
+
+.form-groups > input {
+  border: none;
+  border: 0;
+  line-height: 100%;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  width: 100%;
+  padding-right: 25px;
+  margin: 0px 0px 0px 0px;
+}
+.form-groupss {
+  position: relative;
+  border: 1px solid #999;
+  width: 80%;
+  border-radius: 5px;
+}
+.form-groupss > label {
+  position: absolute;
+  top: -12px;
+  left: 25px;
+  background-color: white;
+  color: #7e7a7a;
+  font-size: 11px;
+  padding: 0 5px;
+}
+
+.form-groupss > input {
+  border: none;
+  border: 0;
+  line-height: 100%;
+}
+
+.form-group3 {
+  position: relative;
+  border: 1px solid #999;
+  width: 50%;
+  border-radius: 5px;
+}
+.form-group3 > label {
+  position: absolute;
+  top: -12px;
+  left: 25px;
+  background-color: white;
+  color: #7e7a7a;
+  font-size: 11px;
+  padding: 0 5px;
+}
+
+.form-group3 > input {
+  border: none;
+  border: 0;
+  line-height: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  padding-right: 45px;
+  margin: 0px 0px 0px 0px;
+}
+
+.form-groupres {
+  position: relative;
+  border: 1px solid #999;
+  width: 50%;
+  border-radius: 5px;
+}
+.form-groupres > label {
+  position: absolute;
+  top: -12px;
+  left: 25px;
+  background-color: white;
+  color: #7e7a7a;
+  font-size: 11px;
+  padding: 0 5px;
+}
+
+.form-groupres > input {
+  border: none;
+  border: 0;
+  line-height: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  padding-right: 140px;
+  margin: 0px 0px 0px 0px;
+}
+
+.form-groupresb {
+  position: relative;
+  border: 1px solid #999;
+  width: 50%;
+  border-radius: 5px;
+}
+.form-groupresb > label {
+  position: absolute;
+  top: -12px;
+  left: 25px;
+  background-color: white;
+  color: #7e7a7a;
+  font-size: 11px;
+  padding: 0 5px;
+}
+
+.form-groupresb > input {
+  border: none;
+  border: 0;
+  line-height: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  padding-right: 60px;
+  margin: 0px 0px 0px 0px;
+}
+
+.form-group4 {
+  position: relative;
+  border: 1px solid #999;
+  width: 50%;
+  border-radius: 5px;
+}
+.form-group4 > label {
+  position: absolute;
+  top: -12px;
+  left: 25px;
+  background-color: white;
+  color: #7e7a7a;
+  font-size: 11px;
+  padding: 0 5px;
+}
+
+.form-group4 > input {
+  border: none;
+  border: 0;
+  line-height: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  padding-right: 55px;
+  margin: 0px 0px 0px 0px;
+}
+
+.form-group5 {
+  position: relative;
+  border: 1px solid #999;
+  width: 50%;
+  border-radius: 5px;
+}
+.form-group5 > label {
+  position: absolute;
+  top: -12px;
+  left: 25px;
+  background-color: white;
+  color: #7e7a7a;
+  font-size: 11px;
+  padding: 0 5px;
+}
+
+.form-group5 > input {
+  border: none;
+  border: 0;
+  line-height: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  padding-right: 80px;
+  margin: 0px 0px 0px 0px;
+}
+
+.form-group6 {
+  position: relative;
+  border: 1px solid #999;
+  width: 50%;
+  border-radius: 5px;
+}
+.form-group6 > label {
+  position: absolute;
+  top: -12px;
+  left: 25px;
+  background-color: white;
+  color: #7e7a7a;
+  font-size: 11px;
+  padding: 0 5px;
+}
+
+.form-group6 > input {
+  border: none;
+  border: 0;
+  line-height: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  padding-right: 110px;
+  margin: 0px 0px 0px 0px;
+}
+
+.form-group input:hover {
+  color: black;
+}
+
+.v-text {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+
+  margin-top: 0.3rem;
+
+  color: #000000;
+}
+
+.b-input:hover {
+  border: 1px solid black;
+}
+@media screen and (max-width: 1200px) {
+  .c-containers {
+    width: 99%;
+    margin: 0rem auto auto auto;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .message {
+    max-width: 240px;
+  }
+  .c-containers {
+    width: 99%;
+    margin: 0rem auto auto auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .c-containers {
+    width: 99%;
+    margin: 0rem auto auto auto;
+  }
+  .chat-right {
+    height: auto;
+    overflow: hidden;
+    margin-left: 0.8rem;
+  }
+  .chat-left {
+    margin-left: 1.2rem;
+  }
+
+  .form-groupss {
+    width: 56%;
+  }
+  .message {
+    width: fit-content;
+  }
+}
+.tt {
+  border: none;
+  padding: 4px;
+}
+
+@media screen and (max-width: 600px) {
+  .c-containers {
+    width: 99%;
+    margin: 0rem auto auto auto;
+  }
+
+  .input-items {
+    display: flex;
+    flex-direction: column;
+  }
+  .form-group,
+  .form-group3,
+  .form-group4,
+  .form-group5,
+  .form-group6,
+  .form-groupres,
+  .form-groupresb,
+  .form-groups,
+  .form-groupss {
+    width: 100%;
+  }
+
+  .message {
+    width: auto;
+  }
+  .chat-left {
+    margin-right: -1.2rem;
+  }
+}
+.random {
+  padding: 12px 0px;
+  outline: none;
+  border: none;
+  width: fit-content;
+}
+
+.loading {
+  color: white;
+  font: 300 4em/150% Impact;
+  text-align: center;
+  padding: 0px 1rem;
+}
+
+/* loading dots */
+
+.loading:after {
+  content: " .";
+  animation: dots 1s steps(5, end) infinite;
+}
+
+@keyframes dots {
+  0%,
+  20% {
+    color: rgba(0, 0, 0, 0);
+    text-shadow: 0.25em 0 0 rgba(0, 0, 0, 0), 0.5em 0 0 rgba(0, 0, 0, 0);
+  }
+  40% {
+    color: white;
+    text-shadow: 0.25em 0 0 rgba(0, 0, 0, 0), 0.5em 0 0 rgba(0, 0, 0, 0);
+  }
+  60% {
+    text-shadow: 0.25em 0 0 white, 0.5em 0 0 rgba(0, 0, 0, 0);
+  }
+  80%,
+  100% {
+    text-shadow: 0.25em 0 0 white, 0.5em 0 0 white;
+  }
+}
